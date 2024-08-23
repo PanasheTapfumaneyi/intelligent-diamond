@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       colors:{
         darkGrey: '#181B1B',
         lightGrey: '#2D3232',
         darkGreen: '#02353C',
-        textGreen: '#07FF9F'
+        textGreen: '#07FF9F',
+        backgroundGrey: '#2C2C2C'
       },
       fontFamily: {
         abeezee: ['ABeeZee', 'sans-serif'],

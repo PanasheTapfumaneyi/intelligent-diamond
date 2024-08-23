@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelligent Diamond</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="src/output.css" rel="stylesheet">
 
     <style>
         body {
@@ -29,8 +30,20 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+            background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
             z-index: 1;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+            }
         }
     </style>
 </head>
@@ -74,8 +87,8 @@
     </div>
 
     <!-- Who We Are Section -->
-    <section class="bg-cover bg-center" style="background-image: url('assets/Faded\ Background3.png');">
-        <div class="bg-black bg-opacity-50 py-10">
+    <section class="bg-cover bg-center parallax bg-backgroundGrey" style="background-image: url('assets/Faded\ Background.png');">
+        <div class=" bg-opacity-50 py-10">
             <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center">
                 <div class="lg:w-1/2 mt-10 lg:mt-0 lg:ml-16">
                     <img src="assets/front-image-final.svg" alt="Who we are image" class="w-full h-auto">
@@ -97,7 +110,7 @@
     </section>
 
     <!-- What We Do Section -->
-    <section class="bg-gradient-to-r from-gray-900 to-gray-800 py-10">
+    <section class="bg-backgroundGrey py-10 bg-cover parallax" style="background-image: url('assets/Faded\ Background.png');">
         <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center">
             <!-- Text and Icons Container (Stays at the top on mobile) -->
             <div class="lg:w-1/2 lg:order-1 mt-10 lg:mt-0 lg:ml-16">
@@ -184,7 +197,7 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="bg-gray-900 py-10 mb-0">
+    <section class="bg-backgroundGrey py-10 mb-0 parallax" style="background-image: url('assets/Faded\ Background.png');">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-green-400 mb-6">Why choose us</h2>
             <p class="text-white text-lg mb-8">
@@ -214,7 +227,7 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section class="bg-gray-900 py-16 px-6 mb-0">
+    <section class="bg-backgroundGrey bg-cover py-16 px-6 mb-0 parallax" style="background-image: url('assets/Faded\ Background.png');">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
             <!-- Text Content -->
             <div class="md:w-1/2 text-white text-left mb-8 md:mb-0 animate__animated animate__fadeInLeft">
@@ -248,6 +261,42 @@
             </div>
         </div>
     </section>
+
+    <footer class="bg-teal-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-around">
+                <!-- About Us Column -->
+                <div>
+                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">About Us</h4>
+                    <p class="text-sm mb-2">Intelligent Diamond is a consulting and technology company that provides digital transformation services to enterprise clients. We are a team of experienced professionals with a passion for innovation and a vision for a future where technology and human creativity converge to create unique and bespoke solutions that transform industries. </p>
+                </div>
+                <!-- Useful Links Column -->
+                <div>
+                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Useful Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:underline">Who We Are</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline">What We Do</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline">Why Choose Us</a></li>
+                    </ul>
+                </div>
+                <!-- Helping Links Column -->
+                <div>
+                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Helping Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="hover:underline">Support</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline">Terms and Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="hover:underline">Dedicated</a></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="text-center mt-10 border-t border-teal-700 pt-6">
+                <p class="text-sm">&copy; 2024 Intelligent Diamond All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
 
 </body>
 
