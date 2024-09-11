@@ -3,7 +3,7 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     extend: {
-      colors:{
+      colors: {
         darkGrey: '#181B1B',
         lightGrey: '#2D3232',
         darkGreen: '#02353C',
@@ -14,6 +14,8 @@ module.exports = {
         abeezee: ['ABeeZee', 'sans-serif'],
         bangers: ['Bangers', 'cursive'],
         fredoka: ['Fredoka', 'sans-serif'],
+        AptosReg: ['Aptos'],
+        // aptosDisplay: ['Aptos Display', 'sans-serif', defaultTheme.fontFamily.sans],
       },
       fontSize: {
         'header-font': '3.815rem',

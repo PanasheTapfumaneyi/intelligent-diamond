@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Aptos';
+    src: url('/fonts/aptos-display.ttf') format('truetype'),
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelligent Diamond</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="src/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aptos+Display:wght@400;700&display=swap" rel="stylesheet">
+
 
     <style>
+        @font-face {
+            font-family: 'Aptos';
+            src: url('/fonts/aptos-display.ttf') format('ttf'),
+        }
+
+
         body {
+            font-family: 'Aptos';
             margin: 0;
             padding: 0;
             overflow-x: hidden;
             background-color: #222;
         }
+
         .video-background {
             position: absolute;
             top: 0;
@@ -25,13 +35,15 @@
             object-fit: cover;
             z-index: -1;
         }
+
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+            background: rgba(0, 0, 0, 0.1);
+            /* Adjust opacity as needed */
             z-index: 1;
         }
 
@@ -48,37 +60,37 @@
         }
 
         .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-} 
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-html {
+        html {
             scroll-behavior: smooth;
         }
 
         .fade-out-image {
-    animation: fadeOut 5s ease-in-out forwards;
-}
+            animation: fadeOut 5s ease-in-out forwards;
+        }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
 
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-Aptos Display antialiased">
 
     <!-- Background Video -->
     <!-- <video class="video-background" autoplay muted loop>
@@ -90,13 +102,14 @@ html {
     <div class="relative bg-cover bg-center h-screen" style="background-image: url('assets/ModernOffice.png');">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black opacity-50 z-20"></div>
-        
+
         <!-- Header Section -->
         <header class="relative z-30 animate__animated animate__fadeInDown">
             <nav class="max-w-7xl mx-auto flex justify-between items-center p-6 lg:px-8">
                 <div class="flex items-center">
-                    <img class="h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="IntelligentDiamond Logo">
-                    <span class="ml-3 text-white text-2xl font-semibold">Intelligent Diamond</span>
+                    <img class="h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        alt="IntelligentDiamond Logo">
+                    <span class="ml-3 text-white text-2xl font-semibold ">Intelligent Diamond</span>
                 </div>
                 <div class="hidden lg:flex space-x-8">
                     <a href="#" class="text-white font-medium hover:text-gray-300">Home</a>
@@ -105,7 +118,7 @@ html {
                 </div>
             </nav>
         </header>
-    
+
         <!-- Main Content -->
         <section class="relative z-30 flex items-center justify-center h-full animate__animated animate__fadeInUp">
             <div class="text-center text-white">
@@ -113,163 +126,226 @@ html {
                     <span class="text-textGreen">Intelligent Diamond</span><br>
                     Your Partner for Digital <br> Transformation
                 </h1>
-                <p class="mt-4 text-lg md:text-xl">Learn more about our company, our services, and our competitive advantages</p>
-                <button onclick="scrollToNextSection('section2')"  class="mt-8 inline-block bg-gray-100 text-black px-6 py-2 rounded-full hover:bg-gray-200 transform transition-transform duration-300 hover:scale-105">Read More</button>
+                <p class="mt-4 text-lg md:text-xl font-AptosReg">Learn more about our company, our services, and our
+                    competitive
+                    advantages</p>
+                <button onclick="scrollToNextSection('section2')"
+                    class="mt-8 inline-block bg-gray-100 text-black px-6 py-2 rounded-full hover:bg-gray-200 transform transition-transform duration-300 hover:scale-105">Read
+                    More</button>
             </div>
         </section>
     </div>
-    
+
+
+
+
+    <!-- What We Do Section -->
+    <section class="bg-backgroundGrey py-10 mb-0 parallax"
+        style="background-image: url('assets/Faded\ Background.png');">
+        <div class="max-w-7xl w-4/5 mx-auto px-6 lg:flex lg:items-center">
+            <!-- Text and Icons Container (Stays at the top on mobile) -->
+            <div class=" lg:order-1 mt-10 lg:mt-0 lg:ml-16">
+                <h2 class="text-4xl font-bold text-green-400 mb-6 text-center">What we do</h2>
+                <p class="text-white text-lg mb-6">
+                    We help our clients achieve efficiency, growth, and agility in their operations with the help of our
+                    tailor-made and innovative, AI-powered solutions. We specialise in the following areas:
+                </p>
+                <div class="container mx-auto p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                        <!-- Box 6: Digital Transformation -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-indigo-500 mb-4">
+                                <!-- Digital Transformation Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/creative-thinking-icon.svg" alt="AI Brain Icon"
+                                        class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class="text-base font-semibold mb-2 text-white">Digital transformation strategy and
+                                implementation
+                            </h3>
+                        </div>
+
+
+
+                        <!-- Box 5: Innovative Use Cases -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-purple-500 mb-4">
+                                <!-- Innovative Use Cases Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/information-technology-icon.svg"
+                                        alt="AI Innovative Use Cases" class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class="text-base font-semibold mb-2 text-white">Identification of innovative and
+                                intelligent use
+                                cases</h3>
+                        </div>
+
+                        <!-- Box 4: Process Re-engineering -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-yellow-500 mb-4">
+                                <!-- AI Robot Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/AI Icon 1.svg" alt="AI Robot Icon" class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class=" text-base font-semibold mb-2 text-white">Process re-engineering and optimisation
+                                (Lean)</h3>
+                        </div>
+
+
+                        <!-- Box 3: Customised Solution Design -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-red-500 mb-4">
+                                <!-- Custom Solution Design Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/head-idea-icon.svg" alt="AI Network Icon" class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class="text-base font-semibold mb-2 text-white">Customised solution design, development,
+                                and
+                                deployment</h3>
+                        </div>
+
+                        <!-- Box 2: Operating Model and Centre of Excellence -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-green-500 mb-4">
+                                <!-- Operating Model Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/tech-icon.svg" alt="AI Operating Model" class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class="text-base font-semibold mb-2 text-white">Operating model and Centre of Excellence
+                                design
+                                and
+                                deployment</h3>
+                        </div>
+
+                        <!-- Box 1: Project Management -->
+                        <div
+                            class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                            <div class="text-blue-500 mb-4">
+                                <!-- AI Robot Icon -->
+                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
+                                    <img src="assets/icons/digital-icon.svg" fill="currentColor" alt="AI Robot Icon"
+                                        class="w-12 h-12">
+                                </a>
+                            </div>
+                            <h3 class="text-base font-semibold mb-2 text-white">Project Management</h3>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <p class="text-white text-lg mb-6">
+                    Our team members are experienced in all areas of our service offering and have worked for global
+                    companies in various industries including e.g. mining, financial services, industrial products,
+                    telecommunications, FMCG, transportation, public sector etc.
+                </p>
+                <p class="text-white text-lg mb-6">
+                    Our solutions are designed with a technology-agnostic approach to perfectly align with your
+                    requirements, collaborating with expert specialists when necessary.
+                </p>
+            </div>
+            <!-- Image Container (Moves to the bottom on mobile) -->
+            <!-- <div class="lg:w-1/2 lg:order-2 order-1">
+                <img src="assets/Image2.svg" alt="What we do image" class="w-full h-auto">
+            </div> -->
+        </div>
+    </section>
 
     <!-- Who We Are Section -->
-    <section id="section2" class="bg-cover bg-center parallax" style="background-image: url('assets/Faded\ Background.png');">
+    <section id="section2" class="bg-cover bg-center parallax py-10"
+        style="background-image: url('assets/Faded\ Background.png');">
         <div class=" bg-opacity-50 py-10">
             <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center">
                 <div class="lg:w-1/2 mt-10 lg:mt-0 lg:ml-16">
                     <!-- <img src="assets/FrontPicture1.png" alt="Who we are image" class="w-[100px] h-[200px] fade-out-image"> -->
-                    <img src="assets/front-image-new.svg" alt="Who we are image">
+                    <img src="/assets/AI- Image.png" alt="Who we are image">
                 </div>
                 <div class="lg:w-1/2 text-white">
-                    <h2 class="text-4xl font-bold text-green-400 mb-6">Who we are?</h2>
+                    <h2 class="text-4xl font-bold text-green-400 mb-6">Who we are</h2>
                     <p class="text-lg mb-6">
-                        Intelligent Diamond is a consulting and technology company that provides digital transformation services to enterprise clients.
+                        Intelligent Diamond is a consulting and technology company that provides digital transformation
+                        services to enterprise clients.
                     </p>
                     <p class="text-lg mb-6">
-                        We are a team of experienced professionals with a passion for innovation and a vision for a future where technology and human creativity converge to create unique and bespoke solutions that transform industries.
+                        We are a team of experienced professionals with a passion for innovation and a vision for a
+                        future where technology and human creativity converge to create unique and bespoke solutions
+                        that transform industries.
                     </p>
                     <p class="text-lg">
-                        We service clients in Africa and Europe through our offices in Mauritius, South Africa and Finland.
+                        We service clients in Africa and Europe through our offices in Mauritius, South Africa and
+                        Finland.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do Section -->
-    <section class="bg-backgroundGrey py-10 mb-0 parallax" style="background-image: url('assets/Faded\ Background.png');">
-        <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center">
-            <!-- Text and Icons Container (Stays at the top on mobile) -->
-            <div class="lg:w-1/2 lg:order-1 mt-10 lg:mt-0 lg:ml-16">
-                <h2 class="text-4xl font-bold text-green-400 mb-6">What we do</h2>
-                <p class="text-white text-lg mb-6">
-                    We help our clients achieve efficiency, growth, and agility in their operations with the help of our tailor-made and innovative, AI-powered solutions. We specialise in the following areas:
-                </p>
-                <div class="container mx-auto p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Box 1: Project Management -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-blue-500 mb-4">
-                                <!-- AI Robot Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/1087/1087840.png" alt="AI Robot Icon" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Project Management</h3>
-                        </div>
-                        <!-- Box 2: Operating Model and Centre of Excellence -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-green-500 mb-4">
-                                <!-- Operating Model Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132110.png" alt="AI Operating Model" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Operating model and Centre of Excellence design and deployment</h3>
-                        </div>
-                        <!-- Box 3: Customised Solution Design -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-red-500 mb-4">
-                                <!-- Custom Solution Design Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/2997/2997923.png" alt="AI Network Icon" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Customised solution design, development, and deployment</h3>
-                        </div>
-                        <!-- Box 4: Process Re-engineering -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-yellow-500 mb-4">
-                                <!-- AI Robot Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png" alt="AI Robot Icon" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Process re-engineering and optimisation (Lean)</h3>
-                        </div>
-                        <!-- Box 5: Innovative Use Cases -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-purple-500 mb-4">
-                                <!-- Innovative Use Cases Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721590.png" alt="AI Innovative Use Cases" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Identification of innovative and intelligent use cases</h3>
-                        </div>
-                        <!-- Box 6: Digital Transformation -->
-                        <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
-                            <div class="text-indigo-500 mb-4">
-                                <!-- Digital Transformation Icon -->
-                                <a href="https://www.flaticon.com/free-icons/ai" title="AI icons">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/4335/4335633.png" alt="AI Brain Icon" class="w-12 h-12">
-                                </a>
-                            </div>
-                            <h3 class="text-sm font-semibold mb-2">Digital transformation strategy and implementation</h3>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-white text-lg mb-6">
-                    Our team members are experienced in all areas of our service offering and have worked for global companies in various industries including e.g. mining, financial services, industrial products, telecommunications, FMCG, transportation, public sector etc. 
-                </p>
-                <p class="text-white text-lg mb-6">
-                    Our solutions are designed with a technology-agnostic approach to perfectly align with your requirements, collaborating with expert specialists when necessary.
-                </p>
-            </div>
-            <!-- Image Container (Moves to the bottom on mobile) -->
-            <div class="lg:w-1/2 lg:order-2 order-1">
-                <img src="assets/Image2.svg" alt="What we do image" class="w-full h-auto">
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="bg-backgroundGrey py-10 mb-0 parallax" style="background-image: url('assets/Faded\ Background.png');">
+    <section class="bg-backgroundGrey py-10 mb-0 parallax"
+        style="background-image: url('assets/Faded\ Background.png');">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-green-400 mb-6">Why choose us</h2>
-            <p class="text-white text-lg mb-8">
-                We strive to create value for you with customised and cost-effective AI-powered solutions and a human-centric approach. Our competitive advantages include:
-            </p>
+            <!-- <p class="text-white text-lg mb-8">
+                We strive to create value for you with customised and cost-effective AI-powered solutions and a
+                human-centric approach. Our competitive advantages include:
+            </p> -->
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Price Box -->
-                <div class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
+                <div
+                    class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
                     <img src="assets/dollar-symbol.png" alt="Price Icon" class="w-12 h-12 mb-4">
                     <h3 class="text-lg font-semibold mb-4">Price</h3>
-                    <p>We offer affordable solutions thanks to leveraging our in-house AI tools, our remote operating model, and our skilled yet cost-effective development teams in Mauritius and South Africa.</p>
+                    <p>We offer affordable solutions thanks to leveraging our in-house AI tools, our remote operating
+                        model, and our skilled yet cost-effective development teams in Mauritius and South Africa.</p>
                 </div>
                 <!-- Pace Box -->
-                <div class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
+                <div
+                    class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
                     <img src="assets/speed.png" alt="Pace Icon" class="w-12 h-12 mb-4">
                     <h3 class="text-lg font-semibold mb-4">Pace</h3>
-                    <p>Our use of AI technology, swift assembly of development teams, and small business adaptability enable us to provide prototypes and solutions quickly.</p>
+                    <p>Our use of AI technology, swift assembly of development teams, and small business adaptability
+                        enable us to provide prototypes and solutions quickly.</p>
                 </div>
                 <!-- People Box -->
-                <div class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
-                    <img src="assets/ai.png" alt="People Icon" class="w-12 h-12 mb-4">
+                <div
+                    class="flex flex-col items-center bg-gray-800 rounded-lg shadow-lg p-6 text-center text-white transition duration-300 ease-in-out transform hover:bg-green-800 hover:scale-105">
+                    <img src="assets/ai.png" style="filter: brightness(0) invert(1);" alt="People Icon"
+                        class="w-12 h-12 mb-4">
                     <h3 class="text-lg font-semibold mb-4">People</h3>
-                    <p>We combine human creativity with technological advances to create bespoke and optimised solutions for our clients’ unique challenges. By placing people at the heart of the transformation process, we acknowledge that technology serves as a tool for achieving objectives, not as the objective in itself.</p>
+                    <p>We combine human creativity with technological advances to create bespoke and optimised solutions
+                        for our clients’ unique challenges.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Us Section -->
-    <section class="bg-backgroundGrey bg-cover py-16 px-6 mb-0 parallax" style="background-image: url('assets/Faded\ Background.png');">
+    <section class="bg-backgroundGrey bg-cover py-16 px-6 mb-0 parallax"
+        style="background-image: url('assets/Faded\ Background.png');">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
             <!-- Text Content -->
             <div class="md:w-1/2 text-white text-left mb-8 md:mb-0 animate__animated animate__fadeInLeft">
                 <p class="text-xl mb-4">
-                    If you are interested in working with us or learning more about our company, please contact us via email at 
-                    <a href="mailto:info@intelligentdiamond.com" class="text-green-400 underline">info@intelligentdiamond.com</a> 
-                    or using the form below. We look forward to hearing from you and helping you achieve your digital transformation goals.
+                    If you are interested in working with us or learning more about our company, please contact us via
+                    email at
+                    <a href="mailto:&#x69;&#x6e;&#x66;&#x6f;&commat;&#x69;&#x6e;&#x74;&#x65;&#x6c;&#x6c;&#x69;&#x67;&#x65;&#x6e;&#x74;&#x64;&#x69;&#x61;&#x6d;&#x6f;&#x6e;&#x64;&period;&#x63;&#x6f;&#x6d;"
+                        class="text-green-400 underline">HERE</a>
+
+                    or using the form below. We look forward to hearing from you and helping you achieve your digital
+                    transformation goals.
                 </p>
             </div>
             <!-- Contact Form -->
@@ -277,22 +353,31 @@ html {
                 <form action="#" method="POST" class="bg-gray-700 rounded-lg p-8 shadow-lg">
                     <div class="mb-4">
                         <label for="name" class="block text-white text-sm font-bold mb-2">Name:</label>
-                        <input type="text" id="name" name="name" class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400" required>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400"
+                            required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-white text-sm font-bold mb-2">Email:</label>
-                        <input type="email" id="email" name="email" class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400" required>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400"
+                            required>
                     </div>
                     <div class="mb-4">
                         <label for="phone" class="block text-white text-sm font-bold mb-2">Phone:</label>
-                        <input type="phone" id="phone" name="phone" class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400" required>
+                        <input type="phone" id="phone" name="phone"
+                            class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400"
+                            required>
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-white text-sm font-bold mb-2">Message:</label>
-                        <textarea id="message" name="message" rows="4" class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400" required></textarea>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full p-2 rounded-lg bg-gray-600 text-white border border-gray-500 focus:outline-none focus:border-green-400"
+                            required></textarea>
                     </div>
                     <div class="mb-4">
-                        <button type="submit" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 focus:outline-none focus:bg-green-600">
+                        <button type="submit"
+                            class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 focus:outline-none focus:bg-green-600">
                             Send Message
                         </button>
                     </div>
@@ -307,11 +392,15 @@ html {
                 <!-- About Us Column -->
                 <div>
                     <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">About Us</h4>
-                    <p class="text-sm mb-2">Intelligent Diamond is a consulting and technology company that provides digital transformation services to enterprise clients. We are a team of experienced professionals with a passion for innovation and a vision for a future where technology and human creativity converge to create unique and bespoke solutions that transform industries. </p>
+                    <p class="text-sm mb-2">Intelligent Diamond is a consulting and technology company that provides
+                        digital transformation services to enterprise clients. We are a team of experienced
+                        professionals with a passion for innovation and a vision for a future where technology and human
+                        creativity converge to create unique and bespoke solutions that transform industries. </p>
                 </div>
                 <!-- Useful Links Column -->
                 <div>
-                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Useful Links</h4>
+                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Useful Links
+                    </h4>
                     <ul>
                         <li class="mb-2"><a href="#" class="hover:underline">Who We Are</a></li>
                         <li class="mb-2"><a href="#" class="hover:underline">What We Do</a></li>
@@ -320,7 +409,8 @@ html {
                 </div>
                 <!-- Helping Links Column -->
                 <div>
-                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Helping Links</h4>
+                    <h4 class="text-lg font-semibold border-b-2 border-teal-500 inline-block pb-2 mb-4">Helping Links
+                    </h4>
                     <ul>
                         <li class="mb-2"><a href="#" class="hover:underline">Support</a></li>
                         <li class="mb-2"><a href="#" class="hover:underline">Terms and Conditions</a></li>
@@ -328,14 +418,14 @@ html {
                         <li class="mb-2"><a href="#" class="hover:underline">Dedicated</a></li>
                     </ul>
                 </div>
-               
+
             </div>
             <div class="text-center mt-10 border-t border-teal-700 pt-6">
                 <p class="text-sm">&copy; 2024 Intelligent Diamond All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
+
 
 </body>
 
@@ -343,32 +433,41 @@ html {
 
 <script>
     function scrollToNextSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
 
-        
+    // Obscure the email address
+    const emailUser = "info";
+    const emailDomain = "intelligentdiamond.com";
+    const emailLink = document.getElementById("email-link");
+
+    // Set the email link and text
+    emailLink.href = `mailto:${emailUser}@${emailDomain}`;
+    emailLink.textContent = `${emailUser}@${emailDomain}`;
+
+
 
 
     document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeElements = document.querySelectorAll('.fade-in');
 
-    const appearOnScroll = new IntersectionObserver(
-        (entries, appearOnScroll) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    appearOnScroll.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.1
-        }
-    );
+        const appearOnScroll = new IntersectionObserver(
+            (entries, appearOnScroll) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
 
-    fadeElements.forEach(el => {
-        appearOnScroll.observe(el);
+        fadeElements.forEach(el => {
+            appearOnScroll.observe(el);
+        });
     });
-});
 
 </script>
