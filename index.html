@@ -350,7 +350,8 @@
             </div>
             <!-- Contact Form -->
             <div class="md:w-1/2 animate__animated animate__fadeInRight">
-                <form action="#" method="POST" class="bg-gray-700 rounded-lg p-8 shadow-lg">
+                <form action="https://formsubmit.co/info@intelligentdiamond.com" method="POST"
+                    class="bg-gray-700 rounded-lg p-8 shadow-lg" id="contactForm">
                     <div class="mb-4">
                         <label for="name" class="block text-white text-sm font-bold mb-2">Name:</label>
                         <input type="text" id="name" name="name"
@@ -381,7 +382,14 @@
                             Send Message
                         </button>
                     </div>
+                    <input type="hidden" name="_next" value="https://panashetapfumaneyi.github.io/intelligent-diamond/">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse"
+                        value="Thank you for your inquiry! We will respond to your message shortly. Regards, IntelligentDiamond Team">
                 </form>
+                <div id="confirmationMessage" class="hidden text-white mt-4 p-4 bg-green-600 rounded-lg">
+                    Your message has been sent successfully!
+                </div>
             </div>
         </div>
     </section>
@@ -445,6 +453,12 @@
     emailLink.href = `mailto:${emailUser}@${emailDomain}`;
     emailLink.textContent = `${emailUser}@${emailDomain}`;
 
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+        // Display confirmation message
+        document.getElementById('confirmationMessage').classList.remove('hidden');
+        // You can add more logic to clear the form or perform additional actions
+    });
 
 
 
